@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const UserRoutes = require("./Routes/UserRoutes");
 const ExpenseRoutes = require("./Routes/ExpenseRoutes");
+const EmailRoutes =require("./Routes/EmailRoutes")
 const path = require("path");
 
 const filepath = path.join(__dirname, ".", "uploads");
@@ -20,6 +21,7 @@ mongoose
 app.use("/image", express.static(filepath));
 app.use("/api/user", UserRoutes);
 app.use("/api/expense", ExpenseRoutes);
+app.use("/api/send-email",EmailRoutes);
 
 app.listen(5000, () => {
   console.log("Server started on port 5000");

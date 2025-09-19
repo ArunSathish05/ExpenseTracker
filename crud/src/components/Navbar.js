@@ -97,6 +97,11 @@ const buypremium = () => {
             </Link>
           )}
         </li>
+        <li>
+          <Link to="/premium" style={styles.link}>
+            ❔
+          </Link>
+        </li>
       </ul>
 
       {/* 🔹 Portal Modal */}

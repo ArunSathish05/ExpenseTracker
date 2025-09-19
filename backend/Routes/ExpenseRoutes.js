@@ -18,4 +18,5 @@ router.put("/delete/:id", deleteExpense);
 router.get("/all/:id", expdown);
 router.put("/update/:id", authmiddeleware, handleUpload, updateExp);
 
+
 module.exports = router;

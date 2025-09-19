@@ -33,8 +33,8 @@ const Home = () => {
       .get(`http://localhost:5000/api/expense/all/${Id}`)
       .then((res) => {
         setExp(res.data);
-        console.log(res.data);
-        console.log(Exp);
+        // console.log(res.data);
+        // console.log(Exp);
       })
       .catch((e) => {
         console.log("download errore", e.message);
@@ -49,7 +49,7 @@ const Home = () => {
       .then((res) => {
         setExpenses(res.data.expenses);
         setLoading(false);
-        console.log("expenses", expenses);
+        // console.log("expenses", expenses);
 
         setmaxCount(res.data.maxCount);
       })
@@ -76,7 +76,7 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     const fd = new FormData();
     fd.append("category", formData.category);
     fd.append("date", formData.date);
@@ -182,7 +182,7 @@ const Home = () => {
 
 
 
-  console.log("userData: ",UserData);
+  // console.log("userData: ",UserData);
   
   return (
     <div className="home-container">
